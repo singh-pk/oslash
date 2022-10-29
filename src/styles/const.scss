@@ -1,13 +1,12 @@
 // Spacing
 $sp-sm: 8px;
 $sp-md: 10px;
+$sp-md-x: 13px;
 $sp-lg: 16px;
-
-// Background color
-$coolGray-900: #111827;
 
 // Border Radius
 $br-btn: 4px;
+$br-box: 6px;
 
 // Font weights
 $fw-n: 400;
@@ -17,5 +16,17 @@ $fw-b: 500;
 $fs-md: 14px;
 $fs-lg: 16px;
 
-// Font Colors
+// Box Shadow
+$shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.05);
+
+// Line heights
+$lg-md: 20px;
+$lh-lg: 24px;
+
+// Colors
+$coolGray-900: #111827;
 $white: #ffffff;
+$indigo-500: #6366f1;
+$gray-500: #6b7280;
+$gray-50: #f9fafb;
+$gray-700: #374151;

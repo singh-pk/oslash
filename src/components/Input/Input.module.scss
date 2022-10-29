@@ -1,0 +1,32 @@
+@import 'styles/const';
+@import 'styles/main';
+
+.container {
+  @include boxStyles($padding: 0, $height: 42px);
+  @include flexColBetween;
+  @include fontInherit($lh: $lh-lg, $fs: $fs-lg, $color: $gray-500);
+  overflow: hidden;
+}
+
+.input--primary {
+  background-color: $white;
+  @include boxStyles($padding: 0 $sp-md-x, $border: none, $width: 100%);
+  @include fontInherit;
+
+  &::placeholder {
+    @include fontInherit;
+  }
+}
+
+.actions--container--primary {
+  height: 100%;
+
+  button {
+    background-color: $gray-50;
+    border: 0;
+    border-left: 1px solid #d1d5db;
+    height: 100%;
+    @include fontInherit($color: $gray-700);
+    padding: 0 $sp-md-x;
+  }
+}

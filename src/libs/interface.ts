@@ -13,4 +13,13 @@ interface ShowProps {
   children: ReactElement;
 }
 
-export type { ButtonProps, ShowProps };
+interface InputProps
+  extends React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
+  variant: 'primary' | 'secondary';
+  buttonTxt?: string;
+}
+
+export type { ButtonProps, ShowProps, InputProps };
