@@ -41,6 +41,11 @@ module.exports = {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
     <style type="text/css">
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
       body {
         font-family: 'Inter', sans-serif;
         font-style: normal;
