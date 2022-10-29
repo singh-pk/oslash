@@ -24,11 +24,6 @@ const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: 'Share'
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
   children: 'Share',
   icon: ShareIcon
 };
