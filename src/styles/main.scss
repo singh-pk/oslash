@@ -1,0 +1,18 @@
+@import './const.scss';
+
+// Fonts
+@mixin fontInherit($lh: inherit, $fw: inherit, $color: inherit, $fs: inherit) {
+  font: inherit;
+  line-height: $lh;
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+
+// Grid
+@mixin gridColCenter($gap: $sp-md) {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  gap: $gap;
+}

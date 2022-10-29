@@ -1,0 +1,17 @@
+@import 'styles/const';
+@import 'styles/main';
+
+.button {
+  @include gridColCenter;
+  @include fontInherit($fw: $fw-b, $color: $white, $fs: $fs-md);
+  background-color: $coolGray-900;
+  border-radius: $br-btn;
+  padding: $sp-sm $sp-lg;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonIcon {
+  width: $fs-md;
+  height: $fs-md;
+}

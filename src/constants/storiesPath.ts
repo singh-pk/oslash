@@ -1,0 +1,3 @@
+export const STORIES_PATH = {
+  COMPONENTS: 'COMPONENTS',
+};
