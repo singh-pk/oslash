@@ -13,7 +13,11 @@ interface ShowProps {
   children: ReactElement;
 }
 
-interface TextFieldProps {
+interface TagsProps {
+  tags: (string | number)[];
+}
+
+interface TextFieldProps extends Partial<TagsProps> {
   variant: 'primary' | 'secondary';
   inputProps?: React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
@@ -31,6 +35,16 @@ interface TextFieldProps {
   };
 }
 
+interface TextFieldInputProps
+  extends Pick<TextFieldProps, 'inputProps' | 'variant'> {}
+
 interface TextFieldActionProps extends Omit<TextFieldProps, 'inputProps'> {}
 
-export type { ButtonProps, ShowProps, TextFieldProps, TextFieldActionProps };
+export type {
+  ButtonProps,
+  ShowProps,
+  TextFieldProps,
+  TextFieldInputProps,
+  TextFieldActionProps,
+  TagsProps
+};

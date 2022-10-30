@@ -7,15 +7,7 @@
   @include flexColBetween;
 }
 
-.input {
-  @include fontInherit;
-
-  &::placeholder {
-    @include fontInherit;
-  }
-}
-
-// Primary Styles
+// Primary
 
 .container--primary {
   @extend .container;
@@ -24,18 +16,7 @@
   overflow: hidden;
 }
 
-.input--primary {
-  @extend .input;
-
-  @include boxStyles(
-    $padding: 0 $sp-md-x,
-    $border: none,
-    $width: 100%,
-    $bgColor: $white
-  );
-}
-
-// Secondary Styles
+// Secondary
 
 .container--secondary {
   @extend .container;
@@ -50,19 +31,4 @@
   );
 
   @include fontInherit($lh: $lh-md, $fs: $fs-md, $color: $gray-500);
-}
-
-.input--secondary {
-  @extend .input;
-
-  @include boxStyles(
-    $padding: 0,
-    $border: none,
-    $width: 100%,
-    $bgColor: inherit,
-    $bs: none,
-    $br: 0
-  );
-
-  margin-right: $sp-lg;
 }

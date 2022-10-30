@@ -1,0 +1,20 @@
+@import 'styles/const';
+@import 'styles/main';
+
+.tags {
+  @include gridColCenter;
+  white-space: nowrap;
+  margin-right: $sp-lg;
+
+  .tag {
+    @include gridColCenter;
+    background-color: $coolGray-200;
+    padding: $sp-sm;
+    border-radius: $br-btn;
+    color: $coolGray-900;
+
+    .icon {
+      cursor: pointer;
+    }
+  }
+}

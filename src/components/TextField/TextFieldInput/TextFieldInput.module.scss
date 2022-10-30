@@ -1,0 +1,42 @@
+@import 'styles/const';
+@import 'styles/main';
+
+// Common
+
+.input {
+  @include fontInherit;
+
+  &::placeholder {
+    @include fontInherit;
+  }
+}
+
+// Primary
+
+.input--primary {
+  @extend .input;
+
+  @include boxStyles(
+    $padding: 0 $sp-md-x,
+    $border: none,
+    $width: 100%,
+    $bgColor: $white
+  );
+}
+
+// Secondary
+
+.input--secondary {
+  @extend .input;
+
+  @include boxStyles(
+    $padding: 0,
+    $border: none,
+    $width: 100%,
+    $bgColor: inherit,
+    $bs: none,
+    $br: 0
+  );
+
+  margin-right: $sp-lg;
+}

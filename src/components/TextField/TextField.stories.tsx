@@ -42,3 +42,21 @@ Secondary.args = {
     ]
   }
 };
+
+export const WithTags = Template.bind({});
+WithTags.args = {
+  variant: 'secondary',
+  inputProps: {
+    placeholder: 'Search emails, names or groups'
+  },
+  buttonProps: { label: 'Invite' },
+  dropdownProps: {
+    options: [
+      { label: 'Full Access', value: 'Full Access' },
+      { label: 'Can View', value: 'Can View' },
+      { label: 'Can Edit', value: 'Can Edit' },
+      { label: 'No Access', value: 'No Access' }
+    ]
+  },
+  tags: ['Tom Cook']
+};
