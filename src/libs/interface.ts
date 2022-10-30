@@ -13,13 +13,24 @@ interface ShowProps {
   children: ReactElement;
 }
 
-interface InputProps
-  extends React.DetailedHTMLProps<
+interface TextFieldProps {
+  variant: 'primary' | 'secondary';
+  inputProps?: React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
-  > {
-  variant: 'primary' | 'secondary';
-  buttonTxt?: string;
+  >;
+  buttonProps?: React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > & { label: string };
+  dropdownProps?: {
+    options: {
+      label: string;
+      value: string | number | readonly string[] | undefined;
+    }[];
+  };
 }
 
-export type { ButtonProps, ShowProps, InputProps };
+interface TextFieldActionProps extends Omit<TextFieldProps, 'inputProps'> {}
+
+export type { ButtonProps, ShowProps, TextFieldProps, TextFieldActionProps };

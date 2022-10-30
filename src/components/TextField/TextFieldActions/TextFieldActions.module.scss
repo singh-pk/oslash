@@ -1,0 +1,56 @@
+@import 'styles/const';
+@import 'styles/main';
+
+$border-color: #d1d5db;
+
+// Common
+
+.action--container {
+  @include gridColCenter($gap: $sp-lg-x);
+
+  .dropdown {
+    @include fontInherit($fs: $fs-sm, $lh: $lh-sm);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url('../../../assets/Dropdown.svg') no-repeat right;
+    appearance: none;
+    width: 5.3125rem;
+  }
+}
+
+// Primary
+
+.actions--container--primary {
+  @extend .action--container;
+  height: 100%;
+
+  .button {
+    background-color: $gray-50;
+    border: 0;
+    border-left: border($borderColor: $border-color);
+    height: 100%;
+    @include fontInherit($color: $gray-700);
+    padding: 0 $sp-md-x;
+  }
+}
+
+// Secondary
+
+.actions--container--secondary {
+  @extend .action--container;
+
+  .button {
+    border: border($borderColor: $border-color);
+    border-radius: $br-box;
+    background-color: $white;
+    cursor: pointer;
+    padding: $sp-sm $sp-md-x;
+    @include fontInherit(
+      $fs: $fs-md,
+      $color: $gray-700,
+      $lh: $lh-sm,
+      $fw: $fw-b
+    );
+  }
+}

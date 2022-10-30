@@ -24,19 +24,31 @@
   justify-content: space-around;
 }
 
+// Border
+@function border(
+  $borderWidth: 1px,
+  $borderStyle: solid,
+  $borderColor: $indigo-500
+) {
+  @return $borderWidth $borderStyle $borderColor;
+}
+
 // Box
 @mixin boxStyles(
-  $border: 1px solid $indigo-500,
+  $border: border(),
   $bs: $shadow-sm,
+  $br: $br-box,
   $padding: $sp-sm $sp-lg,
   $height: 100%,
-  $width: 100%
+  $width: 100%,
+  $bgColor: inherit
 ) {
   border: $border;
   box-shadow: $bs;
-  border-radius: $br-box;
+  border-radius: $br;
   outline: none;
   padding: $padding;
   height: $height;
   width: $width;
+  background-color: $bgColor;
 }

@@ -1,0 +1,68 @@
+@import 'styles/const';
+@import 'styles/main';
+
+// Common
+
+.container {
+  @include flexColBetween;
+}
+
+.input {
+  @include fontInherit;
+
+  &::placeholder {
+    @include fontInherit;
+  }
+}
+
+// Primary Styles
+
+.container--primary {
+  @extend .container;
+  @include boxStyles($padding: 0, $height: 2.625rem);
+  @include fontInherit($lh: $lh-lg, $fs: $fs-lg, $color: $gray-500);
+  overflow: hidden;
+}
+
+.input--primary {
+  @extend .input;
+
+  @include boxStyles(
+    $padding: 0 $sp-md-x,
+    $border: none,
+    $width: 100%,
+    $bgColor: $white
+  );
+}
+
+// Secondary Styles
+
+.container--secondary {
+  @extend .container;
+
+  @include boxStyles(
+    $padding: $sp-md $sp-lg,
+    $height: 3.625rem,
+    $border: 0,
+    $bs: none,
+    $br: 0,
+    $bgColor: $gray-100
+  );
+
+  @include fontInherit($lh: $lh-md, $fs: $fs-md, $color: $gray-500);
+}
+
+.input--secondary {
+  @extend .input;
+
+  @include boxStyles(
+    $padding: 0,
+    $border: none,
+    $width: 100%,
+    $bgColor: inherit,
+    $bs: none,
+    $br: 0
+  );
+
+  margin-right: $sp-lg;
+}
